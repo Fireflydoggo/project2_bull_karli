@@ -1,0 +1,476 @@
+@charset "UTF-8";
+
+header, nav, aside, article, footer, section, main, figure, figcaption {
+	display:block;
+}
+
+/*================================
+
+Universal Styling
+
+*================================*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+#container {
+	margin: auto;
+}
+
+@font-face {
+  font-family: 'Fredericka the Great', cursive;
+  src: url('../fonts/FrederickatheGreat-Regular.ttf') format('truetype');
+  font-family: 'Permanent Marker', cursive;
+  src: url('../fonts/PermanentMarker-Regular.ttf') format('truetype');
+  font-family: 'Carter One', cursive;
+  src: url('../fonts/CarterOne-Regular.ttf') format('truetype');
+}
+
+/*=====================================
+
+Header Styling
+
+*======================================*/
+
+header {
+  background: rgb(0 0 0 / 50%);
+  padding: 1% 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  color: White;
+  text-align: center;
+  font-size: 1.2em;
+  padding-top: 1%;
+
+}
+
+.desktop-nav {
+	display: none;
+}
+
+/*------Hamburger Menu-----------*/
+
+.hamburger{
+  background:none;
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: .5%;
+  right:0;
+  line-height:35px;
+  padding:5px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  background:none;
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: .5%;
+  right:0;
+  padding:7px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+
+.menu{z-index:1000000; font-weight:bold; font-size: 1em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#666;}
+.menu ul li a:hover {  color: blue; text-decoration:none;}
+.menu a{text-decoration:none; color:#666;}
+.menu a:hover{text-decoration:none; color:#666;}
+.menu ul li a {font-family: 'Carter One', cursive;}
+
+/*------End Hamburger Menu-----------*/
+
+/*====================================
+
+Main Body Style
+
+*===================================*/
+
+body {
+  display: inline-block;
+  background-image: url('../images/hello.jpg');
+  background-size: cover;
+}
+
+h2 {
+  font-family: 'Permanent Marker', cursive;
+  text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+  font-size: 36px;
+  text-shadow: 2px 3px 4px #000000;
+  position: absolute;
+  display: inline-block;
+  top: 11%;
+  z-index: 200;
+}
+
+.highlight {
+  color: turquoise;
+}
+
+.center {
+   position: relative;
+   display: inline-block;
+   max-width: 265px;
+   padding-top: 0;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+video {
+   display: inline-block;
+   position: absolute;
+   top: 45%;
+   z-index: 100;
+   right: 0;
+   left: 13%;
+}
+
+article {
+   display: inline-block;
+   color: white;
+   padding: 23% 4%;
+   position: relative;
+   font-family: 'Carter One', cursive;
+   font-size: .9em;
+	 text-shadow: 3px 3px 4px #000000;
+   font-weight: 300;
+   top: 25%;
+   z-index: 100;
+   right: 0;
+   max-width: 100%;
+   text-align: center;
+
+}
+
+section {
+   display: inline-block;
+   position: relative;
+   font-family: 'Fredericka the Great', cursive;
+   text-align: center;
+   z-index: 101;
+   left: 630px;
+	 top: 348px;
+   right: 0;
+}
+
+.pseudo p::first-letter {
+   font-size: 1.7em;
+}
+
+p::first-line {
+   text-shadow: 3px 3px 4px #000000;
+   }
+
+.pseudo a:first-of-type {
+   color: #049eff;
+   font-weight: bold;
+   text-decoration: underline;
+}
+
+a:hover {
+  background-color: black;
+}
+
+a:active {
+  background-color: #ffc82e;
+}
+
+/*===============================
+
+Contact Form Styling
+
+*===============================*/
+
+.contact-form {
+  background: turquoise;
+  padding: 15px;
+  max-width: 500px;
+  max-height: 600px;
+  border-radius: 4px;
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  margin: 0 auto;
+  display: inline-block;
+  position: absolute;
+  top: 149px;
+  z-index: 100;
+  right: 135px;
+}
+
+.name {
+  display: inline-block;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 20px;
+  text-shadow: 2px 3px 4px #000000;
+}
+
+.label_input_wrap {
+  display: block;
+  padding-bottom: 7px;
+}
+
+.submit input {
+  background: white;
+  color: turquoise;
+  padding: 5px 20px;
+  display: inline;
+}
+
+.input-section {
+  margin-bottom: 10px;
+  display: inline-block;
+  text-align: center;
+  text-shadow: 2px 3px 4px #000000;
+  padding-top: 7px;
+}
+
+::placeholder {
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: bold;
+  text-align: center;
+}
+
+input {
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+textarea {
+  font-family: 'Fredericka the Great', cursive;
+  padding: 5px 5px;
+  border-radius: 4px;
+  margin: 0px;
+  width: 420px;
+  height: 134px;
+}
+
+.submit input:hover {
+    background-color: darkblue;
+}
+
+.submit input:active {
+  background-color: black;
+}
+
+.submit input {
+  text-align: right;
+}
+
+/*--------------------Start of 320px Media Query------------------*/
+
+@media (min-width: 320px) {
+
+	main {
+		min-height: 615px;
+	}
+}
+/*--------------------End of 320px Media Query------------------*/
+
+/*--------------------Start of 825px Media Query------------------*/
+
+@media (min-width: 825px) {
+	main {
+		min-height: 590px;
+	}
+
+	h1 {
+		text-align: center;
+	  padding-top: 1%;
+	  font-size: 1.2em;
+	}
+
+	h2 {
+		font-family: 'Permanent Marker', cursive;
+		text-transform: uppercase;
+		text-align: center;
+		width: 100%;
+		font-size: 3em;
+		text-shadow: 2px 3px 4px #000000;
+		position: absolute;
+		display: inline-block;
+		right: -22%;
+		top: 12%;
+		z-index: 200;
+	}
+
+	article {
+			display: inline-block;
+			color: white;
+			padding: 14% 25%;
+			float: left;
+			left: 22%;
+}
+
+	video {
+		 display: inline-block;
+		 position: absolute;
+		 top: 12%;
+		 z-index: 100;
+		 right: 0;
+		 left: 5%;
+	}
+
+	.contact-form {
+				top: -62px;
+				z-index: 100;
+				right: 637px;
+			}
+
+
+
+}
+
+/*--------------------End of 825px Media Query------------------*/
+
+/*--------------------Start of 1000px Media Query------------------*/
+@media (min-width: 1000px) {
+
+	#container {
+		width: 100%;
+	}
+
+	.hamburger, .cross, .menu {
+		display: none
+	}
+
+	/* ---------Desktop Nav Styles--------- */
+
+	nav {
+	  width: 55%;
+	  display: inline-block;
+		float: right;
+	}
+
+	header nav li {
+	  font-family: 'Permanent Marker', cursive;
+	  list-style-type: none;
+	  display: inline-block;
+	  padding-right: 2%;
+	  text-shadow: 2px 2px 4px #000000;
+	}
+
+	header nav ul {
+	  text-align: right;
+	  font-size: 1em;
+	}
+
+	header a {
+	  color: white;
+	  text-decoration: none;
+	  text-shadow: 2px 2px 4px #000000;
+	  font-size: 1.2em;
+	}
+
+	header a:hover {
+	  color: blue;
+	  text-decoration: underline;
+	}
+
+
+	.desktop-nav {
+		display: inline-block;
+	}
+
+	.desktop-nav ul {
+		list-style-type: none;
+	}
+
+	.destop-nav ul li{
+		display: inline;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.desktop-nav ul li a {
+		font-weight: bold;
+	}
+
+	.desktop-nav ul li a:hover {
+		color: blue;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	/* --------End Desktop Nav Styles----------- */
+
+	h1 {
+	  font-family: 'Fredericka the Great', cursive;
+	  color: White;
+	  text-align: left;
+	  font-size: 1.2em;
+	  padding-top: 0;
+	  padding-left: 2%;
+	  width: 35%;
+	  display: inline-block;
+	}
+
+	h2 {
+	  font-family: 'Permanent Marker', cursive;
+	  text-transform: uppercase;
+		text-align: center;
+		width: 30%;
+	  font-size: 3em;
+	  text-shadow: 2px 3px 4px #000000;
+	  position: absolute;
+	  display: inline-block;
+		right: 27%;
+	  top: 15%;
+	  z-index: 200;
+	}
+
+	article {
+	    display: inline-block;
+	    color: white;
+	    padding: 14% 25%;
+			float: left;
+			left: 22%;
+}
+
+	video {
+		 display: inline-block;
+		 position: absolute;
+		 top: 12%;
+		 z-index: 100;
+		 right: 0;
+		 left: 12%;
+	}
+
+	.contact-form {
+			  top: -57px;
+			  z-index: 100;
+			  right: 720px;
+			}
+
+
+
+
+}

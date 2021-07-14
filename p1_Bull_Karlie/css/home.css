@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+header, nav, aside, article, footer, section, main, figure, figcaption {
+	display:block;
+}
+
+/*================================
+
+Universal Styling
+
+*================================*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+#container {
+	margin: auto;
+}
+
+@font-face {
+  font-family: 'Fredericka the Great', cursive;
+  src: url('../fonts/FrederickatheGreat-Regular.ttf') format('truetype');
+  font-family: 'Permanent Marker', cursive;
+  src: url('../fonts/PermanentMarker-Regular.ttf') format('truetype');
+	font-family: 'Carter One', cursive;
+  src: url('../fonts/CarterOne-Regular.ttf') format('truetype');
+}
+
+/*=====================================
+
+Header Styling
+
+*======================================*/
+
+header {
+  background: rgb(0 0 0 / 50%);
+  padding: 1% 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  color: White;
+	text-align: center;
+  padding-top: 1%;
+  font-size: 1.2em;
+}
+
+footer {
+  font-family: 'Fredericka the Great', cursive;
+	text-align: center;
+	color: white;
+  padding-top: 3%;
+}
+
+.desktop-nav {
+	display: none;
+}
+
+/*------Hamburger Menu-----------*/
+
+.hamburger{
+  background:none;
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: .5%;
+  right:0;
+  line-height:35px;
+  padding:5px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  background:none;
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: .5%;
+  right:0;
+  padding:7px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+
+.menu{z-index:1000000; font-weight:bold; font-size: 1em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#666;}
+.menu ul li a:hover {  color: blue; text-decoration:none;}
+.menu a{text-decoration:none; color:#666;}
+.menu a:hover{text-decoration:none; color:#666;}
+.menu ul li a {font-family: 'Carter One', cursive;}
+
+/*------End Hamburger Menu-----------*/
+
+
+
+/*====================================
+
+Main Body Style
+
+*===================================*/
+
+body {
+  display: inline-block;
+	background-color: black;
+}
+
+.center {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 175%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 45%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.center:hover .image {
+  opacity: 0.3;
+}
+
+.center:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  font-family: 'Permanent Marker', cursive;
+  position: relative;
+  display: inline-block;
+  background-color: #0cf2f5;
+  color: black;
+  font-size: 1em;
+  padding: 15% 40%;
+}
+
+aside a {
+	color: black;
+}
+
+aside a:hover {
+    color: blue;
+}
+/*--------------------Start of 320px Media Query------------------*/
+
+@media (min-width: 320px) {
+
+	main {
+		min-height: 615px;
+	}
+
+}
+/*--------------------End of 320px Media Query------------------*/
+
+@@media (min-width: 620px) {
+
+	.image {
+		width: 70%;
+	}
+
+}
+
+/*--------------------Start of 825px Media Query------------------*/
+
+@media (min-width: 825px) {
+	main {
+		min-height: 590px;
+	}
+
+	h1 {
+		text-align: center;
+		padding-top: 1%;
+		font-size: 1.2em;
+	}
+
+	.image {
+		width: 100%;
+	}
+
+}
+
+/*--------------------End of 825px Media Query------------------*/
+
+/*--------------------Start of 1000px Media Query------------------*/
+@media (min-width: 1000px) {
+
+#container {
+	width: 100%;
+	background-color: black;
+}
+
+.hamburger, .cross, .menu {
+	display: none
+}
+
+/* ---------Desktop Nav Styles--------- */
+
+nav {
+  width: 55%;
+  display: inline-block;
+	float: right;
+}
+
+header nav li {
+  font-family: 'Permanent Marker', cursive;
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 2%;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+header nav ul {
+  text-align: right;
+  font-size: 1em;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 1.2em;
+}
+
+header a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+
+.desktop-nav {
+	display: inline-block;
+}
+
+.desktop-nav ul {
+	list-style-type: none;
+}
+
+.destop-nav ul li{
+	display: inline;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.desktop-nav ul li a {
+	font-weight: bold;
+}
+
+.desktop-nav ul li a:hover {
+	color: blue;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* --------End Desktop Nav Styles----------- */
+
+.center {
+   position: relative;
+	 text-align: center;
+   display: inline-block;
+   padding-top: 0%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+	top: 40%;
+	left: 48%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.center:hover .image {
+  opacity: 0.3;
+}
+
+.center:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  font-family: 'Permanent Marker', cursive;
+  position: relative;
+  display: inline-block;
+  background-color: #0cf2f5;
+  color: black;
+  font-size: 1em;
+  padding: 15% 40%;
+}
+
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  color: White;
+  text-align: left;
+  font-size: 1.2em;
+  padding-top: 0;
+  padding-left: 1%;
+  width: 35%;
+  display: inline-block;
+}
+
+footer {
+  padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+
+}

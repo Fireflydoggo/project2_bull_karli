@@ -1,0 +1,360 @@
+@charset "UTF-8";
+
+header, nav, aside, article, footer, section, main, figure, figcaption {
+	display:block;
+}
+
+/*================================
+
+Universal Styling
+
+*================================*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+#container {
+	margin: auto;
+}
+
+@font-face {
+  font-family: 'Fredericka the Great', cursive;
+  src: url('../fonts/FrederickatheGreat-Regular.ttf') format('truetype');
+  font-family: 'Permanent Marker', cursive;
+  src: url('../fonts/PermanentMarker-Regular.ttf') format('truetype');
+	font-family: 'Carter One', cursive;
+  src: url('../fonts/CarterOne-Regular.ttf') format('truetype');
+
+}
+
+/*=====================================
+
+Header Styling
+
+*======================================*/
+
+header {
+  background: rgb(0 0 0 / 50%);
+  padding: 1% 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  color: White;
+	text-align: center;
+  padding-top: 1%;
+  font-size: 1.2em;
+}
+
+
+.desktop-nav {
+	display: none;
+}
+
+/*------Hamburger Menu-----------*/
+
+.hamburger{
+  background:none;
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: .5%;
+  right:0;
+  line-height:35px;
+  padding:5px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:1.4em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  background:none;
+  position: relative;
+  display: inline-block;
+  float: right;
+  top: .5%;
+  right:0;
+  padding:7px 15px 0px 15px;
+  color:#999;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.menu{z-index:1000000; font-weight:bold; font-size: 1em; width:100%; background:#f1f1f1;  position:absolute; text-align:center; font-size:12px;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu li:hover{display: block;    background:#ffffff; padding:15px 0 15px 0; border-bottom:#dddddd 1px solid;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#666;}
+.menu ul li a:hover {  color: blue; text-decoration:none;}
+.menu a{text-decoration:none; color:#666;}
+.menu a:hover{text-decoration:none; color:#666;}
+.menu ul li a {font-family: 'Carter One', cursive;}
+
+/*------End Hamburger Menu-----------*/
+
+
+
+/*====================================
+
+Main Body Style
+
+*===================================*/
+
+body {
+  display: inline-block;
+  background-image: url('../images/statement.jpg');
+  background-size: cover;
+}
+
+h2 {
+  font-family: 'Permanent Marker', cursive;
+  text-transform: uppercase;
+  font-size: 2.2em;
+  text-shadow: 2px 3px 4px #000000;
+	text-align: center;
+	margin-top: 17%;
+}
+
+.highlight {
+  color: turquoise;
+}
+
+.center {
+   max-width: 265px;
+   padding-top: 4%;
+}
+
+.index {
+  font-family: 'Fredericka the Great', cursive;
+	text-align: center;
+  color: white;
+  padding-top: 0%;
+}
+
+article {
+  position: relative;
+  display: inline-block;
+  font-family: 'Carter One', cursive;
+  background: rgb(0 0 0 / 50%);
+  color: White;
+  text-align: center;
+  width: 270px;
+  padding: 20px;
+  margin: auto;
+  text-shadow: 3px 3px 3px #000000;
+  font-size: 1em;
+  left: 24%;
+  top: 20px;
+  -moz-box-shadow: 0px 0px 15px #777777;
+  -webkit-box-shadow: 0px 0px 15px #777777;
+  box-shadow: 0px 0px 15px #777777;
+ }
+
+section {
+  display: inline-block;
+}
+
+figure {
+  display: inline-block;
+}
+
+/*--------------------Start of 320px Media Query------------------*/
+
+@media (min-width: 320px) {
+  figure {
+		text-align: center;
+		width: 100%;
+		padding-bottom: 2%;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	main {
+		min-height: 615px;
+	}
+}
+/*--------------------End of 320px Media Query------------------*/
+
+/*--------------------Start of 825px Media Query------------------*/
+
+@media (min-width: 825px) {
+	main {
+		min-height: 590px;
+	}
+
+	figure {
+		text-align: center;
+		width: 100%;
+		padding-bottom: 2%;
+	}
+
+	h1 {
+		text-align: center;
+	  padding-top: 1%;
+	  font-size: 1.2em;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+}
+
+/*--------------------End of 825px Media Query------------------*/
+
+/*--------------------Start of 1000px Media Query------------------*/
+@media (min-width: 1000px) {
+
+#container {
+	width: 960px;
+}
+
+.hamburger, .cross, .menu {
+	display: none
+}
+
+/* ---------Desktop Nav Styles--------- */
+
+nav {
+  width: 55%;
+  display: inline-block;
+	float: right;
+}
+
+header nav li {
+  font-family: 'Permanent Marker', cursive;
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 2%;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+header nav ul {
+  text-align: right;
+  font-size: 1em;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 1.2em;
+}
+
+header a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+
+.desktop-nav {
+	display: inline-block;
+}
+
+.desktop-nav ul {
+	list-style-type: none;
+}
+
+.destop-nav ul li{
+	display: inline;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.desktop-nav ul li a {
+	font-weight: bold;
+}
+
+.desktop-nav ul li a:hover {
+	color: blue;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* --------End Desktop Nav Styles----------- */
+
+.me {
+	padding: 0px 1px 1px 1px;
+	float: right;
+  text-align: center;
+}
+
+figure {
+  float: right;
+  right: 9%;
+}
+
+.center {
+	position: absolute;
+  display: inline-block;
+  top: 7%;
+  left: 25%;
+}
+
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+  color: White;
+  text-align: left;
+  font-size: 1.2em;
+  padding-top: 0;
+  padding-left: 1%;
+  width: 35%;
+  display: inline-block;
+}
+
+h2 {
+  position: relative;
+  display: inline-block;
+	z-index: 10;
+	padding-top: 8%;
+  padding-left: 95%;
+  width: 170%;
+
+}
+
+.index {
+	padding-top: 83%;
+  left: 50%;
+  position: relative;
+
+}
+
+article {
+	position: fixed;
+  display: inline-block;
+	top: 30%;
+	left: 48%;
+  font-family: 'Carter One', cursive;
+  background: rgb(0 0 0 / 50%);
+  color: White;
+  width: 270px;
+  height: 340px;
+  padding: 20px;
+  text-shadow: 3px 3px 3px #000000;
+  font-size: .9em;
+  -moz-box-shadow: 0px 0px 25px #777777;
+  -webkit-box-shadow: 0px 0px 25px #777777;
+  box-shadow: 0px 0px 25px #777777;
+ }
+
+}
+
+
+
+/*--------End of 1000px Media Query-------*/

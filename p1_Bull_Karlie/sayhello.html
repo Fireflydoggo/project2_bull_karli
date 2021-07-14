@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HTMS3CT0VX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-HTMS3CT0VX');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Contact the Artist Karli Bull" />
+    <meta name="keywords" content="art, animation, opinion, painting, drawing, sculpture, concept, question, contact" />
+    <meta name="robots" content="nofollow" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Say Hello!</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="css/sayhello.css">
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <link rel="icon" type="image/ico" href="images/favicon.ico" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  </head>
+
+<!--Page content-->
+
+  <body id="page5">
+    <div id="container">
+      <header>
+
+        <button class="hamburger">&#9776;</button>
+        <button class="cross">&#735;</button>
+
+        <h1>Unmasking the Art of Karli Bull</h1>
+
+        <nav class="menu">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="artiststatement.html">Artist Statement</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="sayhello.html">Say Hello!</a></li>
+          </ul>
+        </nav>
+
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="artiststatement.html">Artist Statement</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="index.html">Say Hello!</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+<!--Welcome video-->
+
+    <main>
+
+      <video width="400" height="600" autoplay controls muted>
+          <source src="videos/hello.webm" type="video/webm">
+          <source src="videos/hello.mp4" type="video/mp4">
+          <source src="videos/hello.ogg" type="video/ogg">
+      </video>
+
+<!--Warm Regards Statement-->
+
+
+      <h2 class="animate__animated animate__zoomInDown"><span class="highlight">Say Hello!</span></h2>
+
+      <article class="pseudo">
+        <a href="https://www.instagram.com/randomblondebullthatsmilesalot/" target="_blank">Instagram</a>
+        <p id="one">Thank you for taking the time to visit and indulge in my work.  I'd really love to hear about your ideas, critiques, opinions, or even inspirations for your own work.</p>
+
+        <p id="two">So please feel free to send me whatever may be on your mind!</p>
+      </article>
+
+<!--Contact Form Submission-->
+
+      <section>
+        <form class="contact-form" id="test_form" name="test_form" method="POST" action="form.php" onsubmit="return validateForm(this)">
+
+          <div class="name input-section">
+            <label for="name" class="label_input_wrap">Name</label>
+            <input type="text" name="req_name" id="name" placeholder="First and Last Name"  />
+          </div>
+
+          <div class="email input-section">
+            <label for="email" class="label_input_wrap">Email</label>
+            <input type="email" name="req_email" id="email" placeholder="hello@gmail.com"/>
+          </div>
+
+          <div class="where are you from input-section">
+            <label for="whereareyoufrom" class="label_input_wrap">Where are you from?</label>
+            <input type="text" name="where are you from" id="whereareyoufrom" placeholder="California"/>
+          </div>
+
+          <div class="radiobutton input-section">
+            <h3>Favorite Portfolio Section</h3>
+            <input type="radio" name="art" value="fine art" id="fineart"/><label for="fineart">Fine Art</label>
+            <input type="radio" name="art" value="digital art" id="digitalart"/><label for="digitalart">Digital Art</label>
+            <input type="radio" name="art" value="sculpture" id="sculpture"/><label for="sculpture">Sculpture</label>
+            <input type="radio" name="art" value="animation" id="animation"/><label for="animation">Animation</label>
+          </div>
+
+          <div class="comments input-section">
+            <label for="comments" class="label_input_wrap">Comments</label>
+            <textarea name="comments" id="comments" cols="55" rows="15" placeholder="Leave a message here!"></textarea>
+          </div>
+
+          <div class="submit">
+            <input type="submit" value="Say Hello!"/>
+          </div>
+
+        </form>
+
+      </section>
+    </main>
+
+    <script src="js/hamburger.js"></script>
+
+  </body>
+</html>
